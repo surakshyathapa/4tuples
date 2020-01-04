@@ -94,3 +94,58 @@ a {
     }
   }
 }
+
+
+//our misson
+.our-mission {
+  background-color: #141521;
+  margin: 100px 0;
+  .mission-container {
+    padding: 0px 50px;
+    padding-top: 100px;
+    .description {
+      color: #fff;
+      display: block;
+      letter-spacing: 2px;
+      font-size: 18px;
+      margin-top: 150px;
+    }
+    .img-wrap {
+      img {
+        margin-top: 100px;
+        margin-bottom: 50px;
+      }
+    }
+    .page {
+      &-title {
+        font-weight: 800;
+        letter-spacing: 15px;
+        text-align: center;
+        margin-bottom: 100px;
+        color: #31313c;
+        position: relative;
+        max-width: 1300px;
+        margin: auto;
+      }
+      img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+      }
+      span {
+        display: block;
+        text-align: center;
+        font-size: 28px;
+        color: #141521;
+        font-weight: 100;
+      }
+    }
+    .hireUsBanner {
+      background: $white;
+      color: black;
+      &:after {
+        border-top: 24px solid $white;
+      }
+    }
+  }
+}

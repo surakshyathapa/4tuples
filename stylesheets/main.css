@@ -251,6 +251,54 @@ input:checked ~ .tab-content {
   -webkit-touch-callout: none;
 }
 
+/* line 69, ../sass/common/_header.scss */
+footer {
+  background-color: #141521;
+  color: #ffffff;
+  padding: 60px 0;
+}
+/* line 73, ../sass/common/_header.scss */
+footer .mid-footer {
+  text-align: center;
+}
+/* line 75, ../sass/common/_header.scss */
+footer .mid-footer .footerdetail {
+  width: 230px;
+  text-align: left;
+  margin: auto;
+  margin-bottom: 20px;
+}
+/* line 80, ../sass/common/_header.scss */
+footer .mid-footer .footerdetail p {
+  font-size: 16px;
+}
+/* line 84, ../sass/common/_header.scss */
+footer .mid-footer .sociallinks {
+  border-bottom: 1px solid #0abde3;
+  display: block;
+  list-style: none;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+/* line 91, ../sass/common/_header.scss */
+footer .mid-footer .sociallinks li {
+  display: inline-block;
+}
+/* line 93, ../sass/common/_header.scss */
+footer .mid-footer .sociallinks li a {
+  color: #0abde3;
+}
+/* line 99, ../sass/common/_header.scss */
+footer .footerscroll {
+  text-align: center;
+}
+/* line 101, ../sass/common/_header.scss */
+footer .footerscroll i {
+  font-weight: 900;
+  font-size: 50px;
+}
+
 /* line 1, ../sass/common/_nav.scss */
 .tuples-navigation {
   z-index: 900;
@@ -442,4 +490,62 @@ a {
   object-fit: contain;
   height: 100%;
   width: 100%;
+}
+
+/* line 100, ../sass/pages/_home.scss */
+.our-mission {
+  background-color: #141521;
+  margin: 100px 0;
+}
+/* line 103, ../sass/pages/_home.scss */
+.our-mission .mission-container {
+  padding: 0px 50px;
+  padding-top: 100px;
+}
+/* line 106, ../sass/pages/_home.scss */
+.our-mission .mission-container .description {
+  color: #fff;
+  display: block;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-top: 150px;
+}
+/* line 114, ../sass/pages/_home.scss */
+.our-mission .mission-container .img-wrap img {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+/* line 120, ../sass/pages/_home.scss */
+.our-mission .mission-container .page-title {
+  font-weight: 800;
+  letter-spacing: 15px;
+  text-align: center;
+  margin-bottom: 100px;
+  color: #31313c;
+  position: relative;
+  max-width: 1300px;
+  margin: auto;
+}
+/* line 130, ../sass/pages/_home.scss */
+.our-mission .mission-container .page img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+/* line 135, ../sass/pages/_home.scss */
+.our-mission .mission-container .page span {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  color: #141521;
+  font-weight: 100;
+}
+/* line 143, ../sass/pages/_home.scss */
+.our-mission .mission-container .hireUsBanner {
+  background: #ffffff;
+  color: black;
+}
+/* line 146, ../sass/pages/_home.scss */
+.our-mission .mission-container .hireUsBanner:after {
+  border-top: 24px solid #ffffff;
 }

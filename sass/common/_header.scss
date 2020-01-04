@@ -64,3 +64,43 @@
         }
     }
 }
+
+
+footer {
+  background-color: #141521;
+  color: #ffffff;
+  padding: 60px 0;
+  .mid-footer {
+    text-align: center;
+    .footerdetail{
+        width: 230px;
+        text-align: left;
+        margin: auto;
+        margin-bottom: 20px;
+        p {
+            font-size: 16px;;
+        }
+    }
+    .sociallinks {
+        border-bottom: 1px solid $link-color;
+        display: block;
+        list-style: none;
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        li {
+            display: inline-block;
+            a {
+                color: $link-color;
+            }
+        }
+    }
+  }
+  .footerscroll {
+      text-align: center;
+    i {
+        font-weight: 900;
+        font-size: 50px;
+    }
+  }
+}
