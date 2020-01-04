@@ -1,0 +1,659 @@
+@charset "UTF-8";
+
+/**
+ * Theme Name: Two Up
+ * Version: 1.0.0
+ * Theme URL: http://sequencejs.com/themes/two-up/
+ *
+ * A full-screen, two column layout for showing a featured image and description
+ *
+ * This theme is powered by Sequence.js - The
+ * responsive CSS animation framework for creating unique sliders,
+ * presentations, banners, and other step-based applications.
+ *
+ * Author: Ian Lunn
+ * Author URL: http://ianlunn.co.uk/
+ *
+ * Theme License: http://sequencejs.com/licenses/#free-theme
+ * Sequence.js Licenses: http://sequencejs.com/licenses/
+ *
+ * Copyright © 2015 Ian Lunn Design Limited unless otherwise stated.
+ */
+
+.seq {
+  -webkit-text-size-adjust: 100%;
+  height: 450px;
+  position: relative;
+  width: calc(100% - 100px);
+  max-width: 1300px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.seq .seq-screen,
+.seq .seq-canvas,
+.seq .seq-canvas > * {
+  /* Reset the canvas and steps for more browser consistency */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.seq .seq-canvas {
+  /* Make the steps inline */
+  white-space: nowrap;
+  /* Remove the 4px gap between steps */
+  font-size: 0;
+}
+
+.seq .seq-canvas > * {
+  /* Make the steps inline and 100% of the window width */
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  /* Reset the font-size as the parent was set to 0 */
+  font-size: 16px;
+}
+
+.seq .seq-attribution {
+  /* Credits */
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: .5em;
+  text-align: center;
+  line-height: 140%;
+}
+
+.seq .seq-attribution a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.seq .seq-attribution a:focus,
+.seq .seq-attribution a:hover {
+  color: #000;
+}
+
+.seq .seq-preload-circle {
+  /* Color of preloader indicator circles */
+  fill: black;
+}
+
+.seq .seq-in {
+  /* Until JS is enabled, put the nominated step on top of the others */
+  z-index: 1;
+}
+
+.seq.seq-active {
+  /* When JS is enabled */
+}
+
+.seq.seq-active .seq-nav {
+  display: block;
+}
+
+.seq.seq-active .seq-in {
+  /* Now JS is enabled, remove the z-index from the nominated step */
+  z-index: auto;
+}
+.fimage{
+  height: 100%;
+}
+.seq .seq-nav {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 200px;
+}
+
+.seq .seq-pagination {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 15px;
+  width: 200px;
+  list-style: none;
+}
+
+.seq .seq-pagination a {
+  text-decoration: none;
+}
+
+.seq .seq-pagination li {
+  /* Make the pagination links circles */
+  display: inline;
+  list-style: none;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 10px;
+}
+
+
+.seq .seq-pagination .seq-current a{
+  background: #FF6F00;
+}
+
+.box {
+    position: relative;
+    height: 10px;
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background 1s;
+    background: rgb(255, 255, 255, 0.3);
+}
+
+.seq .seq-content {
+  /* Position the content on the left */
+  left: 0;
+  right: auto;
+  padding: 0 1em;
+  background: transparent;
+  text-align: center;
+  font-size: 0;
+  /* Hide the content until it is active and fades in */
+  opacity: 1;
+  /* When active, move the content over .3s */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  color: #fff;
+}
+
+.seq .seq-content h2 {
+  margin: 70px 0 0 0;
+  font-size: 55px;
+  text-align: left;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.seq .seq-content > div {
+  /* Reset the font-size as .seq-content was set to 0 to remove 4px gap */
+  font-size: 16px;
+  /* Reset the white-space so content wraps as expected */
+  white-space: normal;
+  opacity: 0;
+}
+
+
+
+.back-white{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 450px;
+  z-index: -1;
+  background: #141521;
+}
+
+.seq .seq-feature {
+  overflow: hidden;
+  height: 450px;
+}
+
+
+.seq .seq-in .seq-content > div{
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+
+
+.seq .seq-out .seq-content > div{
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+
+/* .seq .seq-in .seq-content {
+  opacity: 1;
+  -webkit-transform: translateY(0) translateZ(0);
+  -ms-transform: translateY(0) translateZ(0);
+  transform: translateY(0) translateZ(0);
+}
+
+.seq .seq-out .seq-content {
+  opacity: 1;
+  -webkit-transform: translateY(0) translateZ(0);
+  -ms-transform: translateY(0) translateZ(0);
+  transform: translateY(0) translateZ(0);
+} */
+
+.seq.seq-fallback {
+  /* Styles for older browsers when in fallback mode */
+}
+
+.seq.seq-fallback .seq-nav {
+  width: 100%;
+  left: 0;
+  border-radius: 0;
+  margin-top: -40px;
+}
+
+.seq-feature:after{
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: auto;
+  right: auto;
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-right: 40px solid #fff;
+}
+
+.seq.seq-fallback .seq-next-button {
+  display: none !important;
+}
+
+.seq.seq-fallback .seq-tooltip {
+  margin-top: -16px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .seq.seq-reversed .seq-content {
+    /* Don't allow content to reset to its start position when reversed */
+    opacity: 1;
+    -webkit-transform: translateY(0) translateZ(0);
+    -ms-transform: translateY(0) translateZ(0);
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+.seq .seq-canvas > * {
+  overflow: hidden;
+}
+
+.seq .seq-attribution {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 40%;
+  background: black;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: left;
+}
+
+.seq .seq-attribution a {
+  color: #ccc;
+}
+
+.seq .seq-attribution a:focus,
+.seq .seq-attribution a:hover {
+  color: white;
+}
+
+.seq.seq-active {
+  /* When JS is enabled */
+}
+
+.seq.seq-active .seq-next-button {
+  display: block;
+}
+
+.seq .seq-next-button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  bottom: 1em;
+  left: 50%;
+  width: 66px;
+  color: white;
+  -webkit-transform: translateX(-50%) translateZ(100px);
+  -ms-transform: translateX(-50%) translateZ(100px);
+  transform: translateX(-50%) translateZ(100px);
+  -webkit-transition-duration: .1s;
+  transition-duration: .1s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+}
+
+.seq.seq-no-touch .seq-next-button:hover {
+  /* Only add a hover effect on non-touch devices */
+  -webkit-transform: translateX(-50%) translateZ(100px) scale(1.2);
+  -ms-transform: translateX(-50%) translateZ(100px) scale(1.2);
+  transform: translateX(-50%) translateZ(100px) scale(1.2);
+}
+
+.seq .seq-screen,
+.seq .seq-canvas,
+.seq .seq-canvas > * {
+  /* Make Sequence full screen in large layout */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.seq .seq-canvas {
+  white-space: normal;
+}
+
+.seq .seq-left {
+  position: relative;
+  width: 40%;
+  background: transparent;
+  float: left;
+}
+.seq .seq-right {
+  position: relative;
+  width: 60%;
+  float: left;
+}
+
+.seq .seq-nav {
+  top: 250px;
+  left: 0px;
+  right: auto;
+  height: auto;
+}
+
+.seq .seq-feature {
+  /* Position the feature on the right */
+  left: auto;
+  right: 0;
+  position: relative;
+}
+
+.seq .seq-feature .fimage {
+  -webkit-transition: transform 1000ms ease-out;
+  -moz-transition: transform 1000ms ease-out;
+  -o-transition: transform 1000ms ease-out;
+  transition: transform 1000ms ease-out;
+  -webkit-transform: translateX(10%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.seq .seq-out .seq-feature .fimage {
+  -webkit-transition: transform 1150ms linear;
+  -moz-transition: transform 1150ms linear;
+  -o-transition: transform 1150ms linear;
+  transition: transform 1150ms linear;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.seq .seq-in .seq-feature .fimage {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.seq .seq-content {
+  /* -webkit-transform: translateY(100%) translateZ(0);
+  -ms-transform: translateY(100%) translateZ(0);
+  transform: translateY(100%) translateZ(0); */
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+@media only screen and (min-height: 400px) {
+  .seq .seq-next-button {
+    bottom: 2em;
+  }
+}
+
+
+@media only screen and (min-height: 520px) and (max-width: 1100px) {
+  /* Increase the height of the hero image in one-up layout */
+  .seq .seq-feature {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-height: 620px) and (max-width: 1100px) {
+  /* Increase the height of the hero image in one-up layout */
+  .seq .seq-feature {
+    height: 400px;
+  }
+}
+
+/*# sourceMappingURL=sequence-theme.two-up.css.map */
+
+
+@media only screen and (max-width: 1000px) {
+  .seq{
+    height: 600px;
+  }
+  .seq-left, .seq-right{
+    width: 100% !important;
+  }
+  .seq .seq-content h2{
+    margin: 25px 0px 60px 0px;
+  }
+  .seq-left.seq-content{
+    height: 135px;
+  }
+  .seq-right.seq-feature{
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+  }
+  .seq .seq-nav{
+    top: 110px !important;
+    left: 0;
+  }
+}
+@media only screen and (max-width: 800px){
+  .seq .seq-content h2{
+    font-size: 6vw;
+  }
+  .seq .seq-nav{
+    top: 105px !important;
+  }
+  .seq-right.seq-feature{
+    height: 300px;
+  }
+  .seq{
+    height: 450px;
+  }
+  .back-white{
+    height: 400px;
+  }
+  .top-banner-holder{
+    height: 500px;
+  }
+}
+
+
+/*top banner css starts here*/
+.top-banner-holder{
+    position: relative;
+    padding-top: 80px;
+    width: 100%;
+}
+.top-banner {
+    height: 350px;
+    position: relative;
+    margin-bottom: 50px;
+    width: calc(100% - 100px);
+    max-width: 1300px;
+    margin: auto;
+}
+.banner-left {
+    float: left;
+    width: 40%;
+    position: relative;
+    height: 100%;
+}
+.banner-left h1 {
+    font-size: 55px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 100px 100px 10px 0px;
+    margin: 0px;
+}
+.slick-list.draggable{
+  height: auto;
+}
+.about-us.banner-left h1{
+    font-size: 45px;
+}
+.box-holder {
+    position: relative;
+    left: 0px;
+    height: 15px;
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
+}
+.box-holder li{
+    position:relative;
+    list-style: none;
+    height: 10px;
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.box-holder li button {
+    background: #FF6F00;
+    height: 100%;
+    width: 100%;
+    border: none;
+    color: transparent;
+}
+.box-holder .slick-active button {
+    background: #ECB992;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 5s;
+    animation-name: fade;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes fade {
+    from {opacity: 0.8}
+    to {opacity: 1; transform: translate(-100%, 0px);}
+}
+
+@keyframes fade {
+    from {opacity: 0.8;}
+    to {opacity: 1; transform: translate(-100%, 0px);}
+}
+.banner-right {
+    position: relative;
+    height: 380px;
+    width: 60%;
+    float: right;
+    background: #fff;
+    top: 30px;
+    bottom: -24px;
+}
+.banner-right:after{
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: auto;
+  right: auto;
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-right: 40px solid #fff;
+}
+.bottom-line{
+  position: absolute;
+  height: 40px;
+  width: calc(100% - 40px);
+  background-color: #fff;
+  bottom: 0px;
+  right: 0px;
+}
+.holder{
+    display: flex;
+    height: 380px;
+}
+.child-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner-image{
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+.second-banner{
+    position: relative;
+    height: 300px;
+    width: calc(100% - 100px);
+    max-width: 1300px;
+    margin: auto;
+}
+.banner-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.hireUs.about-us h1{
+    font-size: 50px;
+}
+
+@media screen and (max-width: 1370px){
+    .banner-left h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .top-banner-holder{
+        height: 600px;
+    }
+    .banner-left, .banner-right{
+        width: 100%;
+    }
+    .top-banner{
+        height: 500px;
+    }
+    .banner-left h1{
+        font-size: 6vw;
+        padding: 50px 0px 25px 0px;
+    }
+}
+@media screen and (max-width: 800px) {
+  .top-banner-holder{
+    height: 500px;
+  }
+}
+@media screen and (max-width: 600px) {
+    .top-banner{
+        width: calc(100% - 50px);
+        padding: 0px 25px;
+    }
+
+}
+

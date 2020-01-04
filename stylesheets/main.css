@@ -178,6 +178,167 @@ input:checked ~ .tab-content {
   padding: 1em;
 }
 
+/* line 2, ../sass/common/_header.scss */
+.tuples-header {
+  background: #141521;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+/* line 9, ../sass/common/_header.scss */
+.tuples-header .d-flex {
+  height: 80px;
+}
+/* line 12, ../sass/common/_header.scss */
+.tuples-header .brand {
+  margin: 0;
+}
+/* line 14, ../sass/common/_header.scss */
+.tuples-header .brand a, .tuples-header .brand img {
+  display: block;
+}
+/* line 18, ../sass/common/_header.scss */
+.tuples-header .navigator-toggle {
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0;
+  margin-left: auto;
+  position: relative;
+}
+/* line 30, ../sass/common/_header.scss */
+.tuples-header .navigator-toggle span {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+/* line 33, ../sass/common/_header.scss */
+.tuples-header .navigator-toggle span i {
+  display: inline;
+  margin-left: 20px;
+}
+/* line 38, ../sass/common/_header.scss */
+.tuples-header .navigator-toggle .icon {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+  right: auto;
+  bottom: auto;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+}
+/* line 49, ../sass/common/_header.scss */
+.tuples-header .navigator-toggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/* line 1, ../sass/common/_nav.scss */
+.tuples-navigation {
+  z-index: 900;
+  font-size: 16px;
+  line-height: 1.846;
+  height: 100%;
+  padding: 10px 20px;
+  width: 320px;
+  background: #141521;
+  border-left: 1px solid #ededed;
+  color: rgba(255, 255, 255, 0.25);
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  right: -320px;
+  top: 0;
+  transition: all ease 0.7s;
+}
+/* line 17, ../sass/common/_nav.scss */
+.tuples-navigation.open {
+  right: 0;
+}
+/* line 20, ../sass/common/_nav.scss */
+.tuples-navigation .name {
+  text-align: center;
+  padding-top: 30px;
+}
+/* line 23, ../sass/common/_nav.scss */
+.tuples-navigation .name a {
+  color: #0abde3;
+}
+/* line 27, ../sass/common/_nav.scss */
+.tuples-navigation .close {
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 15px 0px 15px 0px;
+}
+/* line 32, ../sass/common/_nav.scss */
+.tuples-navigation .close a {
+  background: #000;
+  padding: 10px 15px;
+}
+/* line 37, ../sass/common/_nav.scss */
+.tuples-navigation .nav-list {
+  font-size: 16px;
+  margin: 10px 0 10px 0;
+  padding: 0 0 10px 0;
+  list-style: none;
+  counter-reset: ctr;
+}
+/* line 43, ../sass/common/_nav.scss */
+.tuples-navigation .nav-list li {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  line-height: 50px;
+  position: relative;
+  text-align: center;
+}
+/* line 49, ../sass/common/_nav.scss */
+.tuples-navigation .nav-list li.active a {
+  color: #0abde3;
+}
+/* line 54, ../sass/common/_nav.scss */
+.tuples-navigation .nav-list li a:hover {
+  color: #0abde3;
+}
+/* line 60, ../sass/common/_nav.scss */
+.tuples-navigation .social-links {
+  position: absolute;
+  bottom: 100px;
+  right: 65px;
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+/* line 69, ../sass/common/_nav.scss */
+.tuples-navigation .social-links li {
+  display: inline-block;
+  margin-right: 12px;
+  padding-left: 0;
+}
+/* line 73, ../sass/common/_nav.scss */
+.tuples-navigation .social-links li a {
+  color: #0abde3;
+}
+
 /* line 1, ../sass/pages/_home.scss */
 * {
   margin: 0;
@@ -189,11 +350,31 @@ img {
   max-width: 100%;
 }
 
-/* line 10, ../sass/pages/_home.scss */
+/* line 8, ../sass/pages/_home.scss */
+a {
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+/* line 14, ../sass/pages/_home.scss */
+.d-flex {
+  display: flex;
+}
+
+/* line 17, ../sass/pages/_home.scss */
+.align-items-center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: cent;
+}
+
+/* line 28, ../sass/pages/_home.scss */
 .hire .service {
   margin-top: 100px;
 }
-/* line 12, ../sass/pages/_home.scss */
+/* line 30, ../sass/pages/_home.scss */
 .hire .service span {
   display: block;
   text-align: center;
@@ -201,18 +382,18 @@ img {
   color: #141521;
   font-weight: 100;
 }
-/* line 19, ../sass/pages/_home.scss */
+/* line 37, ../sass/pages/_home.scss */
 .hire .service .img-wrap {
   height: 200px;
   margin: 50px 0;
 }
-/* line 22, ../sass/pages/_home.scss */
+/* line 40, ../sass/pages/_home.scss */
 .hire .service .img-wrap img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-/* line 28, ../sass/pages/_home.scss */
+/* line 46, ../sass/pages/_home.scss */
 .hire .service .message {
   background: #141521;
   color: #fff;
@@ -222,7 +403,7 @@ img {
   position: relative;
   height: 100px;
 }
-/* line 36, ../sass/pages/_home.scss */
+/* line 54, ../sass/pages/_home.scss */
 .hire .service .message:after {
   bottom: auto;
   top: -24px;
@@ -236,27 +417,27 @@ img {
   height: 0;
 }
 
-/* line 53, ../sass/pages/_home.scss */
+/* line 71, ../sass/pages/_home.scss */
 .team {
   margin: 100px 0;
 }
-/* line 55, ../sass/pages/_home.scss */
+/* line 73, ../sass/pages/_home.scss */
 .team img {
   width: 100%;
 }
 
-/* line 63, ../sass/pages/_home.scss */
+/* line 81, ../sass/pages/_home.scss */
 .what-we-do .page-title {
   font-weight: 800;
   letter-spacing: 15px;
   text-align: center;
   margin-bottom: 100px;
 }
-/* line 70, ../sass/pages/_home.scss */
+/* line 88, ../sass/pages/_home.scss */
 .what-we-do .img-wrap {
   height: 350px;
 }
-/* line 72, ../sass/pages/_home.scss */
+/* line 90, ../sass/pages/_home.scss */
 .what-we-do .img-wrap img {
   object-fit: contain;
   height: 100%;

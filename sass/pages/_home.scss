@@ -5,6 +5,24 @@
 img {
   max-width: 100%;
 }
+a {
+    color: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+.d-flex {
+    display: flex;
+}
+.align-items-center {
+     -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: cent
+}
+
+//banner section
+
+
 //hire us section
 .hire {
   .service {
