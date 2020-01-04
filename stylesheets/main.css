@@ -1,0 +1,264 @@
+/* line 1, ../sass/common/_typo.scss */
+body {
+  font-family: "Raleway", sans-serif;
+}
+/* line 4, ../sass/common/_typo.scss */
+body .page-title {
+  color: rgba(0, 0, 0, 0.12);
+  display: block;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 80px;
+  position: relative;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 40px;
+  width: 100%;
+}
+/* line 16, ../sass/common/_typo.scss */
+body .page-sub-title {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+  color: #141521;
+  margin-top: 100px;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+/* line 19, ../sass/common/_animate.scss */
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+/* line 29, ../sass/common/_animate.scss */
+.hireUsBanner {
+  background: #141521;
+  color: #fff;
+  top: 50px;
+  font-size: 27px;
+  padding: 0 20px;
+  position: absolute;
+  line-height: 55px;
+  left: 100px;
+  right: auto;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+/* line 41, ../sass/common/_animate.scss */
+.hireUsBanner:after {
+  content: "";
+  bottom: -24px;
+  border-top: 24px solid #141521;
+  border-right: 24px solid transparent;
+  position: absolute;
+  left: 24px;
+  bottom: -23px;
+  top: auto;
+  right: auto;
+  width: 0;
+  height: 0;
+}
+
+/* line 55, ../sass/common/_animate.scss */
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+/* Accordion styles */
+/* line 5, ../sass/common/_accordion.scss */
+.tabs {
+  overflow: hidden;
+}
+
+/* line 8, ../sass/common/_accordion.scss */
+.tab {
+  border-bottom: 1px solid #141521;
+  width: 100%;
+  color: #141521;
+  overflow: hidden;
+}
+/* line 13, ../sass/common/_accordion.scss */
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  /* Icon */
+}
+/* line 21, ../sass/common/_accordion.scss */
+.tab-label::after {
+  content: "\02795";
+  font-size: 21px;
+  color: #0abde3;
+  float: right;
+  margin-left: 5px;
+  padding: 15px 0px;
+}
+/* line 30, ../sass/common/_accordion.scss */
+.tab-img {
+  width: 60px;
+  border-radius: 30px;
+  height: 60px;
+}
+/* line 35, ../sass/common/_accordion.scss */
+.tab-title {
+  font-size: 20px;
+  width: calc(100% - 210px);
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  height: 60px;
+}
+/* line 43, ../sass/common/_accordion.scss */
+.tab-content {
+  padding: 0 20px;
+  background-color: #141521;
+  color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  -webkit-clip-path: polygon(5% 13%, 100% 12%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(5% 13%, 100% 12%, 100% 100%, 0 100%, 0 0);
+}
+/* line 53, ../sass/common/_accordion.scss */
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #2c3e50;
+  cursor: pointer;
+}
+/* line 60, ../sass/common/_accordion.scss */
+.tab-close:hover {
+  background: #1a252f;
+}
+/* line 64, ../sass/common/_accordion.scss */
+.tab input {
+  display: none;
+}
+
+/* line 72, ../sass/common/_accordion.scss */
+input:checked + .tab-label::after {
+  content: "\2796";
+}
+/* line 76, ../sass/common/_accordion.scss */
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+/* line 1, ../sass/pages/_home.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, ../sass/pages/_home.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 10, ../sass/pages/_home.scss */
+.hire .service {
+  margin-top: 100px;
+}
+/* line 12, ../sass/pages/_home.scss */
+.hire .service span {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  color: #141521;
+  font-weight: 100;
+}
+/* line 19, ../sass/pages/_home.scss */
+.hire .service .img-wrap {
+  height: 200px;
+  margin: 50px 0;
+}
+/* line 22, ../sass/pages/_home.scss */
+.hire .service .img-wrap img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+/* line 28, ../sass/pages/_home.scss */
+.hire .service .message {
+  background: #141521;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  height: 100px;
+}
+/* line 36, ../sass/pages/_home.scss */
+.hire .service .message:after {
+  bottom: auto;
+  top: -24px;
+  border-bottom: 24px solid #141521;
+  border-left: 24px solid transparent;
+  left: auto;
+  right: 0;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* line 53, ../sass/pages/_home.scss */
+.team {
+  margin: 100px 0;
+}
+/* line 55, ../sass/pages/_home.scss */
+.team img {
+  width: 100%;
+}
+
+/* line 63, ../sass/pages/_home.scss */
+.what-we-do .page-title {
+  font-weight: 800;
+  letter-spacing: 15px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+/* line 70, ../sass/pages/_home.scss */
+.what-we-do .img-wrap {
+  height: 350px;
+}
+/* line 72, ../sass/pages/_home.scss */
+.what-we-do .img-wrap img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}

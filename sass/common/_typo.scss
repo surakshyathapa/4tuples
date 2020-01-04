@@ -1,0 +1,27 @@
+body {
+  font-family: $font-family;
+  .page {
+    &-title {
+      color: rgba(0, 0, 0, 0.12);
+      display: block;
+      font-size: 80px;
+      font-weight: bold;
+      line-height: 80px;
+      position: relative;
+      text-transform: uppercase;
+      white-space: nowrap;
+      letter-spacing: 40px;
+      width: 100%;
+    }
+    &-sub-title {
+      display: block;
+      font-size: 50px;
+      font-weight: bold;
+      position: relative;
+      letter-spacing: 2px;
+      margin-bottom: 0px;
+      color: $primary-color;
+      margin-top: 100px;
+    }
+  }
+}
